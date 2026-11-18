@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F7F5F5">
+<title>FRIENDS HUB</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #292929;
+  --pink: #DFAFC2;
+  --coral: #E8A6A6;
+  --white: #F7F5F5;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%,
+      #DFAFC255, transparent 35%),
+    radial-gradient(circle at 90% 90%,
+      #E8A6A655, transparent 35%),
+    var(--white);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 42px 28px 28px;
+  text-align: center;
+  background: rgba(255,255,255,.88);
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  box-shadow:
+    0 25px 70px rgba(41,41,41,.10),
+    0 2px 8px rgba(41,41,41,.04);
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.welcome {
+  color: #B47C93;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.brand {
+  margin-top: 9px;
+  font-size: 31px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--black);
+}
+
+.line {
+  width: 48px;
+  height: 4px;
+  margin: 18px auto 25px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg, var(--pink), var(--coral)
+  );
+}
+
+h2 {
+  font-size: 23px;
+  line-height: 1.35;
+  color: var(--black);
+}
+
+.description {
+  margin: 15px 0 30px;
+  color: #82777B;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.question {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 17px;
+}
+
+button, .download {
+  width: 100%;
+  height: 56px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.download {
+  background: var(--black);
+  color: white;
+  border: 1px solid var(--black);
+  box-shadow: 0 9px 22px #29292925;
+}
+
+.download:hover {
+  background: #454040;
+  transform: translateY(-2px);
+}
+
+.no {
+  margin-top: 12px;
+  background: #F5E8ED;
+  color: var(--black);
+  border: 1px solid #EBD5DE;
+}
+
+.no:hover {
+  background: var(--pink);
+}
+
+footer {
+  margin-top: 30px;
+  color: #A49A9E;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+@media(max-width:380px) {
+  .card { padding: 32px 20px 24px; }
+  .brand { font-size: 26px; }
+}
+</style>
+</head>
+
+<body>
+
+<main class="card" id="card">
+
+
+
+  <div class="welcome">WELCOME TO</div>
+
+  <div class="brand">FRIENDS HUB</div>
+
+  <div class="line"></div>
+
+  <h2>Your College...Your People.</h2>
+
+  <p class="description">
+    Stay connected with the people who make
+    your college life special.
+    Your memories, your connections,
+    all in one place.<br>App Size 46.58MB
+  </p>
+
+  <div class="question">
+Would You Like to Download FRIENDS HUB?
+  </div>
+
+  <a class="download"
+  href="https://expo.dev/artifacts/eas/xTOlSUrl6VOogIaota6ClT8gVdJlstljGLfgBrJfynM.apk"
+  target="_blank"
+  rel="noopener noreferrer">
+    ↓ &nbsp; DOWNLOAD NOW
+  </a>
+
+  <button class="no" onclick="exitPage()">
+    NO, THANK YOU
+  </button>
+
+  <footer>
+    © 2026 FRIENDS HUB
+    <br><br>
+    MADE FOR G.R.KARTHIKEYAN
+  </footer>
+
+</main>
+
+<script>
+function exitPage() {
+  window.close();
+
+  document.getElementById("card").innerHTML = `
+    <div class="welcome">BYE</div>
+    <div class="brand">FRIENDS HUB</div>
+  <div class="line"></div>
+    <h2>Thanks for visiting!</h2>
+    <p class="description">
+      You can close this browser tab now.
+    </p>
+  `;
+}
+</script>
+
+</body>
+</html>
