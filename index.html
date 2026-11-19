@@ -187,7 +187,7 @@ Would You Like to Download FRIENDS HUB?
   <a class="download"
   href=""
   target="_blank"
-  rel="noopener noreferrer">
+  rel="noopener noreferrer" onclick="Page()">
     ↓ &nbsp; DOWNLOAD NOW
   </a>
 
@@ -204,6 +204,19 @@ Would You Like to Download FRIENDS HUB?
 </main>
 
 <script>
+  function Page() {
+  window.close();
+
+  document.getElementById("card").innerHTML = `
+    <div class="welcome">BYE</div>
+    <div class="brand">FRIENDS HUB</div>
+  <div class="line"></div>
+    <h2>Thanks for visiting!</h2>
+    <p class="description">
+      You can close this browser tab now.
+    </p>
+  `;
+  }
 function exitPage() {
   window.close();
 
